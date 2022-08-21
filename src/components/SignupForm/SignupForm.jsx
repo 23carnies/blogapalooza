@@ -44,7 +44,7 @@ const SignupForm = (props) => {
       className={styles.container}
     >
       <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>
+        <label htmlFor="name" className="form-label">
           Name
         </label>
         <input
@@ -54,10 +54,11 @@ const SignupForm = (props) => {
           value={name}
           name="name"
           onChange={handleChange}
+          className="form-control"
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+        <label htmlFor="email" className="form-label">Email</label>
         <input
           type="text"
           autoComplete="off"
@@ -65,10 +66,11 @@ const SignupForm = (props) => {
           value={email}
           name="email"
           onChange={handleChange}
+          className="form-control"
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+        <label htmlFor="password" className="form-label">Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -76,10 +78,11 @@ const SignupForm = (props) => {
           value={password}
           name="password"
           onChange={handleChange}
+          className="form-control"
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>Confirm Password</label>
+        <label htmlFor="confirm" className="form-label">Confirm Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -87,12 +90,13 @@ const SignupForm = (props) => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
+          className="form-control"
         />
       </div>
       <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>Sign Up</button>
+        <button disabled={isFormInvalid()} className="btn btn-primary">Sign Up</button>
         <Link to="/">
-          <button>Cancel</button>
+          <button className='btn btn-outline-danger'>Cancel</button>
         </Link>
       </div>
     </form>

@@ -6,6 +6,8 @@ import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
 import Users from '../Users/Users'
 import * as authService from '../../services/authService'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
 	const [user, setUser] = useState(authService.getUser())
@@ -29,6 +31,7 @@ const App = () => {
 				<Route path='/signup' element={<Signup handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route path='/login' element={<Login handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route path='/users' element={user ? <Users /> : <Navigate to='/login' />} />
+				{/* TODO: logout link */}
 			</Routes>
 		</>
 	);
